@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    height: 100%;
+}
+
+#container {
+    display: flex;
+    height: 100%;
+    background-color: rgb(44, 44, 44);
+    align-items: center;
+    flex-direction: column;
+}
+
+header {
+    border-bottom: 1px solid rgb(250, 145, 232);
+}
+
+#game {
+    width: 100%;
+    max-width: 500px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.teste {
+    border: 0;
+    padding: 0;
+    font-size: 15px;
+    height: 25px;
+    background-color: rgb(236, 169, 105);
+    color: rgb(10, 11, 12);
+    border-radius: 20px;
+    margin-top: 15px;
+}
+
+.title {
+    color: gainsboro;
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin: 0.4rem 0 0.4rem 0;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#board-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.square {
+    border: 2px solid rgb(58, 58, 60);
+    min-width: 60px;
+    min-height: 50px;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: azure;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#keyboard-container {
+    height: 200px;
+}
+
+.keyboard-row {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto 8px;
+    touch-action: manipulation;
+}
+
+.keyboard-row button {
+    font-family: inherit;
+    font-weight: bold;
+    border: 0;
+    padding: 0;
+    height: 60px;
+    background-color: rgb(250, 145, 232);
+    color: rgb(10, 11, 12);
+    flex-grow: 1;
+    text-transform: uppercase;
+    margin-right: 6px;
+    border-radius: 15px;
+    user-select: none;
+}
+
+.keyboard-row button.wide-button {
+    flex-grow: 1.5;
+}
+
+.spacer-half {
+    flex-grow: 0.5;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: 1s;
+}
+
+.modal-content {
+    background-color: #d8d8d8;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+    border-radius: 10px;
+}
+
+.modal-content>p {
+    text-align: center;
+    font-size: 25px;
+    color: red;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#play-again-btt {
+    align-items: center;
+    margin-left: 170px;
+    height: 50px;
+    width: 100px;
+    border-radius: 50px;
+    background-color: greenyellow;
+}
